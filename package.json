@@ -1,0 +1,25 @@
+{
+  "name": "testangular",
+  "version": "1.0.0",
+  "description": "movie app web",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamsnieves/testangular.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "willians nieves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamsnieves/testangular/issues"
+  },
+  "homepage": "https://github.com/williamsnieves/testangular",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
