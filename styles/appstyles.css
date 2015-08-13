@@ -1,0 +1,61 @@
+.main-title{
+	text-align: center;
+}
+
+.card-title{
+	color: rgba(0,0,0,0.87) !important;
+}
+
+.masonry-brick {
+    margin: 1em;
+    display: none;
+     column-count: 4;
+	 column-gap: 0px;
+	 -moz-column-count: 4;
+	 -moz-column-gap: 0px;
+	 -webkit-column-count: 4;
+	 -webkit-column-gap: 0px;
+}
+.masonry-brick.loaded {
+    display: block;
+}
+
+.thumbnail{
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #ccc;
+  background: #fff;
+}
+
+.thumbnail img{
+	width: 100%;
+}
+
+.movie-info{
+	padding: 1em 1em 1em 1em;
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+}
+
+.movie-stars i{
+	padding: 0 0 0 0;
+	
+}
+
+.movie-stars p{
+	position: relative;
+    top: -2.9em;
+    left: 2em;
+}
+
+.hide-movie{
+	display: none;
+}
+
+.show-spinner{
+	display: none;
+}
+

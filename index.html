@@ -4,11 +4,70 @@
 	<meta charset="UTF-8">
 	<title>Movie app web</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-sanitize.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="styles/appstyles.css">
+	
 </head>
-<body>
+<body ng-controller="movieCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="s12">
+				<h1 class="main-title">MovieApp web</h1>
+			</div>
+			<form class="col s12">
+			      <div class="row">
+			        <div class="input-field col l9 s12">
+			          <i class="material-icons prefix">search</i>
+			          <input id="icon_prefix" type="text" ng-model="author" class="validate">
+			          <label for="icon_prefix">Search author</label>
+			        </div>
+			        <div class="input-field col l3 s12">
+			           <a class="waves-effect waves-light btn" ng-click="searchMovie(author)"><i class="material-icons left"></i>Search</a>
+			        </div>			        
+			      </div>
+			     
+			</form>
+		</div>
+
+		<div class="preloader-wrapper big active show-spinner">
+		    <div class="spinner-layer spinner-blue-only">
+		      <div class="circle-clipper left">
+		        <div class="circle"></div>
+		      </div><div class="gap-patch">
+		        <div class="circle"></div>
+		      </div><div class="circle-clipper right">
+		        <div class="circle"></div>
+		      </div>
+		    </div>
+		  </div>
+
+		 <div  masonry options="{ 'gutter': 10, 'columnWidth': '.col' }">
+		    <div class="masonry-brick pin-layout hide-movie">	           
+				<div ng-repeat="movie in movies">
+					<div class="thumbnail">
+						<h5 class="caption">{{movie.original_title}}</h5>
+						<span class="movie-stars">
+							<i class="material-icons prefix">star_rate</i>
+							<p>{{movie.vote_average}}</p>
+						</span>
+						<img ng-src="{{posterPath}}{{movie.poster_path}}">						
+						<p>{{movie.overview}}</p>
+					</div>
+				</div>				   	
+		        
+		    </div>
+		</div>   		 
+	    
+	       
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+	<script src="js/angular-masonry.min.js"></script>
+	<script src="js/main.js"></script>
 	
 </body>
 </html>
